@@ -1,0 +1,10 @@
+public interface ITransactionRepository
+{
+     Task AddAsync(Transaction transaction);
+
+    Task<List<Transaction>> GetByUserIdAsync(Guid userId);
+
+    Task<List<Transaction>> GetByCategoryAsync(Guid categoryId);
+
+    Task DeleteAsync(Guid transactionId);
+}
